@@ -1,0 +1,13 @@
+const modal=document.querySelector('#modal'),toast=document.querySelector('#toast'),sidebar=document.querySelector('.sidebar');
+const showToast=(message)=>{toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>toast.classList.remove('show'),2400)};
+const openModal=()=>{modal.hidden=false;document.body.style.overflow='hidden';setTimeout(()=>modal.querySelector('input').focus())};
+const closeModal=()=>{modal.hidden=true;document.body.style.overflow=''};
+document.querySelectorAll('.open-customer').forEach(button=>button.addEventListener('click',openModal));
+document.querySelector('#close').addEventListener('click',closeModal);modal.addEventListener('click',event=>{if(event.target===modal)closeModal()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeModal()});
+document.querySelector('#customer-form').addEventListener('submit',event=>{event.preventDefault();closeModal();event.currentTarget.reset();showToast('Customer and solar system added')});
+document.querySelector('#schedule').addEventListener('click',()=>showToast('New visit added to the schedule'));
+document.querySelectorAll('[data-toast]').forEach(button=>button.addEventListener('click',()=>showToast(button.dataset.toast)));
+document.querySelector('#menu').addEventListener('click',()=>sidebar.classList.toggle('open'));
+document.querySelectorAll('.sidebar a').forEach(link=>link.addEventListener('click',()=>sidebar.classList.remove('open')));
+document.querySelector('#search').addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.value.trim())showToast(`Searching for “${event.target.value.trim()}”`)});

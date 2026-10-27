@@ -1,12 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#143f35"><title>ShamsCare — Solar maintenance, on schedule</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Solar project</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus est harum illum placeat quia molestiae quidem eaque, ad ullam expedita blanditiis, eos deserunt laudantium fuga temporibus perspiciatis similique! Maiores, doloremque.</p>
-</body>
-</html>
+<aside class="sidebar"><a class="brand" href="#"><span class="logo">S</span>ShamsCare</a><nav>
+  <a class="active" href="#overview">⌂ <span>Overview</span></a><a href="#customers">♙ <span>Customers</span></a><a href="#visits">□ <span>Visits</span><b>5</b></a><a href="#plans">↻ <span>Plans</span></a><a href="#reports">⌁ <span>Reports</span></a>
+</nav><div class="side-bottom"><div class="upgrade">✦<strong>Grow recurring revenue</strong><small>7 plans renew this month</small><button data-toast="Opening renewals…">Review renewals →</button></div><a class="settings" href="#">⚙ <span>Settings</span></a><div class="profile"><i>MK</i><div><b>Maya Khoury</b><small>Beirut Solar Co.</small></div><button>•••</button></div></div></aside>
+<main><header><button class="menu" id="menu">☰</button><strong class="mobile-brand">ShamsCare</strong><label class="search">⌕ <input id="search" placeholder="Search customers, visits…"></label><div class="header-actions"><button class="bell">♢<i></i></button><button class="primary open-customer">＋ New customer</button></div></header>
+<section class="content" id="overview"><div class="heading"><div><small>MONDAY, 27 OCTOBER</small><h1>Good morning, Maya <em>☀</em></h1><p>Here’s how your maintenance business is doing.</p></div><button class="secondary" id="schedule">＋ Schedule visit</button></div>
+<div class="metrics">
+  <article><i class="metric-icon green">↗</i><label>Monthly recurring revenue ⓘ</label><strong>$4,280</strong><p class="positive">↑ 12.4% <span>from last month</span></p><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+  <article><i class="metric-icon gold">◉</i><label>Active maintenance plans</label><strong>86</strong><p class="positive">↑ 8 <span>new this month</span></p><small class="corner"><b>91%</b> renewal rate</small></article>
+  <article><i class="metric-icon blue">✓</i><label>Visits this month</label><strong>32 <small>/ 41</small></strong><div class="progress"><i></i></div><p class="split"><span>78% complete</span><span>9 remaining</span></p></article>
+  <article class="attention"><i class="metric-icon coral">!</i><label>Needs attention</label><strong>3</strong><p class="issue">● &nbsp;2 weak batteries</p><p class="issue">● &nbsp;1 overdue visit</p></article>
+</div>
+<div class="grid"><section class="panel" id="visits"><div class="panel-head"><div><h2>Today’s schedule</h2><p>Monday, 27 October · 5 visits</p></div><button>View calendar →</button></div><div class="timeline">
+  <time>8:30</time><article class="visit muted"><i class="check">✓</i><div><b>Nadim Haddad</b><small>Achrafieh · Annual Care</small></div><span class="tech"><i class="avatar blue-bg">RK</i>Rami K.</span><em class="pill done">Completed</em><button>•••</button></article>
+  <time>10:30</time><article class="visit current"><i class="check">◌</i><div><b>Layla Mansour</b><small>Hazmieh · Premium Care</small></div><span class="tech"><i class="avatar orange-bg">JA</i>Jad A.</span><em class="pill working">In progress</em><button>•••</button></article>
+  <time>13:00</time><article class="visit"><i class="check">3</i><div><b>Karim Saad</b><small>Jounieh · Essential Care</small></div><span class="tech"><i class="avatar blue-bg">RK</i>Rami K.</span><em class="pill">Upcoming</em><button>•••</button></article>
+  <time>15:30</time><article class="visit"><i class="check">4</i><div><b>Rana Daher</b><small>Baabda · Annual Care</small></div><span class="tech"><i class="avatar orange-bg">JA</i>Jad A.</span><em class="pill">Upcoming</em><button>•••</button></article>
+</div></section>
+<section class="panel activities"><div class="panel-head"><div><h2>Recent activity</h2><p>Updates across your team</p></div><button>•••</button></div>
+  <article><i class="activity-icon good">✓</i><div><p><b>Visit completed</b> for Nadim Haddad</p><small>Rami K. · 18 minutes ago</small></div></article>
+  <article><i class="activity-icon warn">!</i><div><p><b>Weak battery detected</b> at Elias Nassar</p><small>Jad A. · 1 hour ago</small><button data-toast="Customer alert sent">Send customer alert</button></div></article>
+  <article><i class="activity-icon sale">＋</i><div><p><b>New plan sold</b> to Sarah Khoury</p><small>Maya K. · 2 hours ago</small><em>+$60 / month</em></div></article>
+  <article><i class="activity-icon report">⌁</i><div><p><b>Report viewed</b> by George Tabet</p><small>3 hours ago</small></div></article><button class="view-all">View all activity</button>
+</section></div>
+<section class="panel renewals" id="plans"><div class="panel-head"><div><h2>Upcoming renewals</h2><p>Plans renewing in the next 30 days</p></div><button>View all plans →</button></div><div class="table-wrap"><table><thead><tr><th>Customer</th><th>System</th><th>Plan</th><th>Renewal</th><th>Value</th><th>Status</th><th></th></tr></thead><tbody>
+<tr><td><span class="person lavender">RM</span><b>Rita Moussa<small>Metn</small></b></td><td>12 panels · 10kWh</td><td>Premium Care</td><td>2 Nov 2026</td><td><b>$720/yr</b></td><td><em class="pill done">Auto-renew</em></td><td>•••</td></tr>
+<tr><td><span class="person mint">ET</span><b>Elie Touma<small>Keserwan</small></b></td><td>8 panels · 7kWh</td><td>Annual Care</td><td>8 Nov 2026</td><td><b>$480/yr</b></td><td><em class="pill contact">Contact</em></td><td>•••</td></tr>
+<tr><td><span class="person peach">NS</span><b>Nour Salameh<small>Beirut</small></b></td><td>16 panels · 15kWh</td><td>Premium Care</td><td>14 Nov 2026</td><td><b>$720/yr</b></td><td><em class="pill done">Auto-renew</em></td><td>•••</td></tr>
+</tbody></table></div></section>
+<section class="value"><div><small>THE VALUE</small><h2>Turn every installation into a lasting relationship.</h2><p>ShamsCare keeps maintenance on schedule, technicians prepared, and recurring revenue growing—while your customers’ solar systems keep performing.</p></div><div><strong>$51,360</strong><span>projected annual recurring revenue</span><em>↑ $9,240 this year</em></div></section>
+</section></main>
+<nav class="mobile-nav"><a href="#overview">⌂<small>Home</small></a><a href="#visits">□<small>Visits</small></a><button class="open-customer">＋</button><a href="#customers">♙<small>Customers</small></a><a href="#plans">↻<small>Plans</small></a></nav>
+<div class="backdrop" id="modal" hidden><section class="modal" role="dialog"><button id="close">×</button><i>☀</i><h2>Add a new customer</h2><p>Start the core flow by registering a customer and their solar system.</p><form id="customer-form"><label>Customer name<input required placeholder="e.g. Tarek Abou Ali"></label><label>Location<input required placeholder="City or area"></label><div><label>Panels<input required type="number" min="1" placeholder="12"></label><label>Battery capacity<input required placeholder="10 kWh"></label></div><button class="primary">Save customer & system</button></form></section></div><div id="toast" class="toast">Customer added</div><script src="solar.js"></script>
+</body></html>
